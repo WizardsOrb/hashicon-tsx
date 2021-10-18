@@ -1,0 +1,51 @@
+{
+  "name": "@wizardsorb/hashicon",
+  "version": "0.0.1",
+  "description": "Hashicon React (Hooks) utilizing @emeraldpay/hashicon",
+  "main": "build/index.js",
+  "module": "build/index.es.js",
+  "jsnext:main": "build/index.es.js",
+  "types": "build/index.d.ts",
+  "scripts": {
+    "recompile": "rm -rf yarn.lock node_modules build && yarn && yarn build",
+    "build": "rollup -c",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "files": [
+    "build"
+  ],
+  "devDependencies": {
+    "@types/react": "^17.0.4",
+    "@types/react-dom": "^17.0.3",
+    "@types/react-test-renderer": "^17.0.1",
+    "@emeraldpay/hashicon": "^0.5.1",
+    "react": "^17.0.2",
+    "react-dom": "^17.0.2",
+    "react-scripts-ts": "^3.1.0",
+    "react-test-renderer": "^17.0.2",
+    "rollup": "^2.46.0",
+    "rollup-plugin-commonjs": "^10.1.0",
+    "rollup-plugin-node-resolve": "^5.2.0",
+    "rollup-plugin-peer-deps-external": "^2.2.0",
+    "rollup-plugin-typescript2": "^0.30.0",
+    "typescript": "^4.2.4"
+  },
+  "dependencies": {
+    "@emeraldpay/hashicon": "^0.5.1",
+    "clsx": "^1.1.1"
+  },
+  "peerDependencies": {
+    "@emeraldpay/hashicon": "^0.5.1",
+    "react": "^17.0.2"
+  },
+  "repository": {
+    "type": "git",
+    "url": "keybase://team/saturnnetwork/hashicon-tsx"
+  },
+  "engines": {
+    "node": ">=8"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC"
+}
