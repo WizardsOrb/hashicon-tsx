@@ -10,7 +10,7 @@ Install
 
 Install with: 
 ```shell
-$ yarn add https://github.com/WizardsOrb/hashicon-tsx
+$ yarn add hashicon-tsx
 ```   
 
 Install Original with: 

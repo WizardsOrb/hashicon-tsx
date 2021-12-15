@@ -2,20 +2,15 @@
   "name": "hashicon-tsx",
   "version": "0.0.1",
   "description": "Hashicon React (Hooks) utilizing @emeraldpay/hashicon",
-  "main": "build/index.js",
-  "module": "build/index.es.js",
-  "jsnext:main": "build/index.es.js",
-  "types": "build/index.d.ts",
+  "main": "index.js",
+  "types": "index.d.ts",
   "scripts": {
     "reinstall": "rm -rf yarn.lock node_modules build && yarn && yarn build",
-    "prepublish": "npm run clean:dist && tsc",
+    "prepublish": "npm run clean:dist && npm run build",
     "build": "rollup -c source/rollup.config.js",
     "test": "echo \"Error: no test specified\" && exit 1",
     "clean:dist": "rm -rf **.d.ts **.js"
   },
-  "files": [
-    "build"
-  ],
   "devDependencies": {
     "@types/react": "^17.0.4",
     "@types/react-dom": "^17.0.3",
