@@ -1,4 +1,48 @@
+# Logs
+logs
+*.log
+npm-debug.log*
+
+# Dependencies
 node_modules/
-/yarn.lock
+
+# Coverage
+coverage
+
+# Transpiled files
+build/
+dist/
+
+# VS Code
+.vscode
+!.vscode/tasks.js
+
+# JetBrains IDEs
+.idea/
+
+# Optional npm cache directory
+.npm
+
+# Optional eslint cache
+.eslintcache
+
+# Lock Files
+yarn.lock
+package-lock.json
+
+# Misc
 .DS_Store
-.DS_Store
+/docs
+
+# dev
+/.env
+/.backup
+/.dev
+
+# dist
+/abi
+/types
+/utils
+/contracts
+/**.d.ts
+/**.js
