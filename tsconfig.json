@@ -20,5 +20,5 @@
       "allowSyntheticDefaultImports": true
     },
     "include": ["source"],
-    "exclude": ["node_modules", "build", "source/rollup.config.js"]
+    "exclude": ["node_modules", "build", "source/rollup.config.ts"]
   }

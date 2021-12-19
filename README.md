@@ -22,7 +22,7 @@ Usage
 ---
 
 ```js
-import { Hashicon } from '@wizardsorb/hashicon';
+import { Hashicon } from 'hashicon-tsx';
 
 // something that you want to represent visually. For example ID of an object on the screen.
 const value = "9dddff8f-be81-4c27-80c8-099327865f3f";
