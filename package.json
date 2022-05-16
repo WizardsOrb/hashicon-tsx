@@ -1,8 +1,10 @@
 {
   "name": "hashicon-tsx",
-  "version": "0.0.2",
+  "version": "0.0.4",
   "description": "Hashicon React (Hooks) utilizing @emeraldpay/hashicon",
   "main": "index.js",
+  "module": "index.es.js",
+  "jsnext:main": "index.es.js",
   "types": "index.d.ts",
   "scripts": {
     "reinstall": "rm -rf yarn.lock node_modules build && yarn && yarn build",
@@ -12,32 +14,28 @@
     "clean:dist": "rm -rf **.d.ts **.js"
   },
   "devDependencies": {
-    "@types/react": "^17.0.4",
-    "@types/react-dom": "^17.0.3",
-    "@types/react-test-renderer": "^17.0.1",
-    "@emeraldpay/hashicon": "^0.5.1",
-    "react": "^17.0.2",
-    "react-dom": "^17.0.2",
+    "@types/react": "^18.0.9",
+    "@types/react-dom": "^18.0.4",
+    "@types/react-test-renderer": "^18.0.0",
+    "@emeraldpay/hashicon": "^0.5.2",
+    "react": "^18.1.0",
+    "react-dom": "^18.1.0",
     "react-scripts-ts": "^3.1.0",
-    "react-test-renderer": "^17.0.2",
-    "rollup": "^2.46.0",
+    "react-test-renderer": "^18.1.0",
+    "rollup": "^2.73.0",
     "rollup-plugin-commonjs": "^10.1.0",
     "rollup-plugin-node-resolve": "^5.2.0",
-    "rollup-plugin-peer-deps-external": "^2.2.0",
-    "rollup-plugin-typescript2": "^0.30.0",
-    "typescript": "^4.2.4"
+    "rollup-plugin-peer-deps-external": "^2.2.4",
+    "rollup-plugin-typescript2": "^0.31.2",
+    "typescript": "^4.6.4"
   },
   "dependencies": {
-    "@emeraldpay/hashicon": "^0.5.1",
+    "@emeraldpay/hashicon": "^0.5.2",
     "clsx": "^1.1.1"
   },
   "peerDependencies": {
     "@emeraldpay/hashicon": "^0.5.1",
     "react": "^17.0.2"
-  },
-  "repository": {
-    "type": "git",
-    "url": "keybase://team/saturnnetwork/hashicon-tsx"
   },
   "engines": {
     "node": ">=8"

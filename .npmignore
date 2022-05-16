@@ -4,10 +4,11 @@ coverage/
 readme/
 typedoc.json
 .travis.yml
+.prettierrc
+.prettierignore
 *.ts
 .env
 
-source
 tests
 tslint.json
 yarn-error.log

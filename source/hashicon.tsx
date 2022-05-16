@@ -1,60 +1,47 @@
-import React, { useEffect, useRef, ImgHTMLAttributes } from "react";
-import { Params, hashicon, HasherType } from "@emeraldpay/hashicon";
+import React from 'react'
+import { hashicon } from '@emeraldpay/hashicon'
+import type { Params, HasherType } from '@emeraldpay/hashicon'
+import type { ImgHTMLAttributes } from 'react'
 
 export interface Props {
-  value: string;
-  size?: number;
-  hasher?: HasherType;
-  options?: Params;
-  style?: React.CSSProperties;
-  className?: string;
-  onClick?: React.MouseEventHandler<HTMLImageElement>;
+  value: string
+  size?: number
+  hasher?: HasherType
+  options?: Params
+  style?: React.CSSProperties
+  className?: string
+  onClick?: React.MouseEventHandler<HTMLImageElement>
 }
 
 const Hashicon: React.FC<Props> = (props) => {
-  const ref = useRef<ImgHTMLAttributes<HTMLImageElement>>();
-
   const generate = () => {
-    let options = {};
+    let options = {}
 
-    if (typeof options !== "undefined") {
-      options = { ...options, ...props.options };
+    if (typeof options !== 'undefined') {
+      options = { ...options, ...props.options }
     }
 
-    if (typeof props.size === "number") {
-      options = { ...options, ...{ size: props.size } };
+    if (typeof props.size === 'number') {
+      options = { ...options, ...{ size: props.size } }
     }
 
-    if (typeof props.hasher === "string") {
-      options = { ...options, ...{ hasher: props.hasher } };
+    if (typeof props.hasher === 'string') {
+      options = { ...options, ...{ hasher: props.hasher } }
     }
 
     const attributes: ImgHTMLAttributes<HTMLImageElement> = {
-      src: hashicon(props.value, options).toDataURL(),
-      alt: props.value,
-    };
-
-    if (typeof props.size === "number") {
-      attributes.width = props.size;
+      src: hashicon(props.value.toLowerCase(), options).toDataURL(),
+      alt: props.value
     }
 
-    ref.current = attributes;
-  };
+    if (typeof props.size === 'number') {
+      attributes.width = props.size
+    }
 
-  useEffect(() => {
-    generate();
-  }, [props]);
+    return attributes
+  }
 
-  if (!ref.current) return <></>;
+  return <img {...generate()} onClick={props.onClick} className={props.className} style={props.style} />
+}
 
-  return (
-    <img
-      {...ref.current}
-      onClick={props.onClick}
-      className={props.className}
-      style={props.style}
-    />
-  );
-};
-
-export default Hashicon;
+export default Hashicon
